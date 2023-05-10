@@ -93,11 +93,13 @@
 <style scoped lang="scss">
     header{
         nav{
+            width: 80%;
+            margin: 0 auto;
             height: 100px;
             display: flex;
             align-items: center;
-            justify-content: space-around;
-            
+            justify-content: space-between;
+        
             img{
                 height: 60px;
             }

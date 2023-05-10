@@ -1,15 +1,23 @@
 <script >
   import HeaderComp from './components/HeaderComp.vue';
+  import MainComp from './components/MainComp.vue'
+  import IconComp from './components/IconComp.vue'
 
   export default{
     components:{
-      HeaderComp
+      HeaderComp,
+      MainComp,
+      IconComp,
     }
   }
 </script>
 
 <template>
-  <div> <HeaderComp/> </div>
+  <HeaderComp/> 
+  <main>
+    <MainComp/>
+    <IconComp/>
+  </main>
 </template>
 
 <style lang="scss">
