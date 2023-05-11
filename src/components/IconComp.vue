@@ -61,11 +61,12 @@ export default{
                 align-items: center;
                 list-style: none;
                 img{
-                    width: 30px;
+                    width: 40px;
                     margin-right:  10px;
                 }
                 span{
-                    font-size: 20px;
+                    font-size: 15px;
+                    color: white;
                 }
             }
         }
