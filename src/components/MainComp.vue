@@ -1,10 +1,17 @@
 <script>
+//importazione componente
+import SingoloFumetto from './SingoloFumetto.vue'
 
-export default{
+export default {
     name: "MainComp",
-    data(){
-        return{
-            cards:[
+    //importiamo il nostro componente in modo completo
+    components: {
+        SingoloFumetto,
+
+    },
+    data() {
+        return {
+            cards: [
                 {
                     thumb: "https://www.coverbrowser.com/image/action-comics/1-1.jpg",
                     price: "$19.99",
@@ -87,60 +94,32 @@ export default{
 
 <template>
     <div id="ElencoCarte">
+        <div id="jumbotron">
+
+        </div>
         <div class="container">
             <h2>carte visibili</h2>
-            <div id="box-cards-collection">
-                <div class="cards-collection" v-for="(card,index) in cards" :key="index" >
-                    <div>
-                        <img :src="card.thumb" :alt="card.series">
-                        <h4> {{ `${card.series}` }}   </h4>
-                    </div>
-                    
-
-                </div>
-
-            </div>
+            <!-- inseriamo il componente figlio 'singolofumetto' -->
+            <!-- dal componente figlio creiamo tante carte quanti sono gli oggetti presenti nel nostro arrey padre tramite il 'v-for' -->
+            <!-- creazione props='dettaglioggetto' per invio dati dal padrea al figlio  -->
+            <SingoloFumetto v-for="(elem, index) in cards" :key="index" :dettagliOggetto="elem" />
         </div>
-        
     </div>
-
 </template>
 
+
+<!-- sezione organizativa macro contentenitori  -->
 <style lang="scss" scoped>
-    #ElencoCarte{
-        background-color: black;
-        margin-top: 1.8px;
-        padding: 15px 0;
+#jumbotron {
+    background-image: url("/img/jumbotron.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 20rem;
+}
 
-        .container{
-            width: 80%;
-            margin: 0 auto;
-
-            h2{
-                color: white;
-            }
-            #box-cards-collection{
-                display: flex;
-                flex-wrap: wrap;
-                .cards-collection{
-                    
-                    display: flex;
-                    align-items: flex-start;
-
-                    width: calc(100% / 6);
-                    img{
-                        width: 120px;
-                        height: 120px;
-                    }
-                    h4{
-                        color: white;
-                        margin-top: 10px;
-                    }
-                }
-            }
-        }
-
-    }
-
-
+#ElencoCarte {
+    background-color: black;
+    margin-top: 1.8px;
+    padding: 0 0 35px 0;
+}
 </style>

@@ -1,28 +1,28 @@
 <script>
-export default{
+export default {
     name: "IconComp",
-    data(){
-        return{
-            icons:[
+    data() {
+        return {
+            icons: [
                 {
-                    nome:"digital Comics",
-                    path:"buy-comics-merchandise.png"
+                    nome: "digital Comics",
+                    path: "buy-comics-merchandise.png"
                 },
                 {
-                    nome:"digital Comics",
-                    path:"buy-comics-merchandise.png"
+                    nome: "digital Comics",
+                    path: "buy-comics-merchandise.png"
                 },
                 {
-                    nome:"digital Comics",
-                    path:"buy-comics-merchandise.png"
+                    nome: "digital Comics",
+                    path: "buy-comics-merchandise.png"
                 },
                 {
-                    nome:"digital Comics",
-                    path:"buy-comics-merchandise.png"
+                    nome: "digital Comics",
+                    path: "buy-comics-merchandise.png"
                 },
                 {
-                    nome:"digital Comics",
-                    path:"buy-comics-merchandise.png"
+                    nome: "digital Comics",
+                    path: "buy-comics-merchandise.png"
                 },
             ]
         }
@@ -46,30 +46,34 @@ export default{
 </template>
 
 <style lang="scss">
-#area-icons{
+#area-icons {
     background-color: #0282F9;
     padding: 15px 0;
-    .container{
+
+    .container {
         width: 80%;
         margin: 0 auto;
-        ul{
+
+        ul {
             display: flex;
             align-items: center;
             justify-content: space-around;
-            li{
+
+            li {
                 display: flex;
                 align-items: center;
                 list-style: none;
-                img{
+
+                img {
                     width: 40px;
-                    margin-right:  10px;
+                    margin-right: 10px;
                 }
-                span{
+
+                span {
                     font-size: 15px;
                     color: white;
                 }
             }
         }
     }
-}
-</style>
+}</style>
